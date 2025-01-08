@@ -1,0 +1,29 @@
+@baseUrl = http://localhost:8000/api/v1
+
+# @name login
+POST {{baseUrl}}/auth/login HTTP/1.1
+content-type: application/json
+
+{
+    "username": "01644973410",
+    "password": "test1234"
+}
+
+###
+
+# @name register
+POST {{baseUrl}}/auth/register HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Test",
+    "mobile": "01644973410",
+    "password": "test1234",
+    "password_confirmation": "test1234"
+}
+
+###
+
+# @name get-user
+GET {{baseUrl}}/me HTTP/1.1
+Authorization: Bearer 3|dimuCIdGfNt6lKnz5G3C8BDgbaiXQRk4rgi725GY74e3f683
